@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import StudentCard from './components/StudentCard'
 import './App.css'
 
 const students = [
@@ -7,17 +8,6 @@ const students = [
   { id: 3, name: 'Rohan Kumar', rollNumber: '25B003', department: 'Mechanical', cgpa: 8.9 },
   { id: 4, name: 'Meera Nair', rollNumber: '25B004', department: 'Civil Engineering', cgpa: 9.3 },
 ]
-
-function StudentCard({ name, rollNumber, department, cgpa }) {
-  return (
-    <article className="student-card">
-      <h2>{name}</h2>
-      <p><span>Roll number</span>{rollNumber}</p>
-      <p><span>Department</span>{department}</p>
-      <p><span>CGPA</span>{cgpa}</p>
-    </article>
-  )
-}
 
 function App() {
   const [showProfiles, setShowProfiles] = useState(true)
